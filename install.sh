@@ -78,7 +78,7 @@ swapon /dev/cryptfs/swap
 
 ### PACSTRAP
 echo "PACSTRAP"
-pacstrap /mnt base base-devel linux linux-firmware networkmanager lvm2 vim $_MICROCODE
+pacstrap /mnt base base-devel linux linux-firmware networkmanager lvm2 neovim $_MICROCODE
 clear
 
 # GENERATING FSTAB
