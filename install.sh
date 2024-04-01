@@ -44,7 +44,7 @@ _ESP="/dev/$(lsblk $_DISK_INSTALL -o NAME,PARTLABEL | grep ESP| cut -d " " -f1 |
 _CRYPTFS="/dev/$(lsblk $_DISK_INSTALL -o NAME,PARTLABEL | grep cryptfs | cut -d " " -f1 | cut -c7-)"
 
 # Create luks2 partition
-echo "YES" | cryptsetup luksFormat $_CRYPTFS
+cryptsetup luksFormat $_CRYPTFS
 
 # Create logical volumes
 echo "Type password for cryptfs"
